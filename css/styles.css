@@ -101,7 +101,6 @@ img {
 }
 
 .logo {
-  margin-right: 76px;
   font-family: var(--logo-font);
   font-size: 18px;
   font-weight: 800;
@@ -111,6 +110,7 @@ img {
   color: var(--primary-brand);
 }
 .logo-web {
+  margin-right: 76px;
   color: var(--primary-brand);
 }
 .logo-studio-light {
@@ -204,7 +204,6 @@ img {
 .properties-ul {
   display: flex;
   gap: 24px;
-  margin: 0 156px;
 }
 .prop-li {
   flex-basis: calc((100% - 3 * 24px) / 4);
