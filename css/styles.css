@@ -70,13 +70,19 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-/* Header */
-.flex {
+/* Flex */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+/* Header */
 .header {
   border-bottom: 1px solid var(--accent);
 }
@@ -162,6 +168,11 @@ img {
 .hero {
   text-align: center;
   background-color: var(--dark);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero.jpg);
 }
 
 .hero-title {
@@ -208,8 +219,16 @@ img {
 .prop-li {
   flex-basis: calc((100% - 3 * 24px) / 4);
 }
+.prop-svg-wrapper {
+  width: 264px;
+  height: 112px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--light);
+}
+
 .prop-header {
-  margin-bottom: 8px;
+  margin: 8px 0;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -265,7 +284,7 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 .team-div {
-  padding: 32px 0;
+  padding: 32px 16px;
 }
 .team-h {
   margin-bottom: 8px;
@@ -278,6 +297,16 @@ img {
 }
 .team-text {
   text-align: center;
+  margin-bottom: 8px;
+}
+.team-svg-wrapper {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--primary-brand);
+  fill: var(--light);
+  cursor: pointer;
 }
 
 /* Portfolio Page */
