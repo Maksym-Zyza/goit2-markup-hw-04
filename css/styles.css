@@ -1,6 +1,7 @@
 :root {
   --primary-font: Roboto, sans-serif;
   --logo-font: Raleway, sans-serif;
+
   --primary-brand: #4d5ae5;
   --pressed-state: #404bbf;
   --dark: #2e2f42;
@@ -13,6 +14,8 @@
   --hero-background: #2e2f42;
   --white-background: #ffffff;
   --modal-background: #fcfcfc;
+
+  --tran-fast: 500ms ease;
 }
 
 body {
@@ -138,6 +141,7 @@ img {
   letter-spacing: 0.02em;
   font-weight: 500;
   color: var(--dark);
+  transition: color var(--tran-fast);
 }
 .site-nav-a:hover,
 .site-nav-a:focus {
@@ -167,6 +171,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--text);
+  transition: color var(--tran-fast);
 }
 .address-a:hover,
 .address-a:focus {
@@ -216,6 +221,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+  transition: background-color var(--tran-fast);
 }
 .hero-btn:hover,
 .hero-btn:focus {
@@ -372,6 +378,7 @@ img {
   border: 1px solid var(--accent);
   background-color: var(--light);
   font-family: var(--primary-font);
+  transition: color var(--tran-fast), background-color var(--tran-fast);
 }
 .nav-btn:hover,
 .nav-btn:focus {
@@ -381,7 +388,7 @@ img {
 }
 .active-btn {
   color: var(--light);
-  background: var(--pressed-state);
+  background-color: var(--pressed-state);
 }
 /* Cards */
 .portfolio-cards-ul {
