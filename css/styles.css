@@ -260,7 +260,7 @@ img {
   background: var(--modal-background);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-  transition: transform 250ms var(--tran-fast);
+  transition: transform var(--tran-fast);
 }
 .modal-btn {
   position: absolute;
@@ -284,8 +284,8 @@ img {
   transition: fill var(--tran-fast);
 }
 
-.modal-btn-icon:hover,
-.modal-btn-icon:focus {
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
   fill: var(--white-background);
 }
 
@@ -401,6 +401,7 @@ img {
   border-radius: 50%;
   fill: var(--light);
   cursor: pointer;
+  transition: background-color var(--tran-fast);
 }
 .team-icon-link:hover,
 .team-icon-link:focus {
@@ -510,7 +511,7 @@ img {
 }
 .card-a {
   display: block;
-  transition: box-shadow 250ms var(--tran-fast);
+  transition: box-shadow var(--tran-fast);
 }
 .card-a:hover,
 .card-a:focus {
@@ -594,7 +595,6 @@ img {
   font-family: var(--primary-font);
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--white-background);
 }
 .footer-media-header {
   margin-bottom: 16px;
@@ -604,6 +604,7 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: var(--white-background);
 }
 .footer-media-icons {
   width: 224px;
