@@ -91,7 +91,7 @@ img {
 /* Header */
 .header {
   border-bottom: 1px solid var(--accent);
-  box-shadow: зі значенням 0px 2px 1px rgba(46, 47, 66, 0.08),
+  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-nav {
@@ -254,25 +254,39 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 584px;
   flex-shrink: 0;
   border-radius: 4px;
   background: var(--modal-background);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
+  transition: transform 250ms var(--tran-fast);
 }
 .modal-btn {
   position: absolute;
   top: 24px;
   right: 24px;
+  padding: 0;
   width: 24px;
   height: 24px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: var(--accent);
+  transition: background-color var(--tran-fast), border var(--tran-fast);
+}
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--pressed-state);
+  border: none;
 }
 .modal-btn-icon {
   fill: var(--dark);
+  transition: fill var(--tran-fast);
+}
+
+.modal-btn-icon:hover,
+.modal-btn-icon:focus {
+  fill: var(--white-background);
 }
 
 /* Section 2 - Properties  */
@@ -354,7 +368,8 @@ img {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-div {
-  padding: 32px 16px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .team-h {
   margin-bottom: 8px;
@@ -369,6 +384,10 @@ img {
   text-align: center;
   margin-bottom: 8px;
 }
+.team-ul {
+  justify-content: center;
+  gap: 24px;
+}
 .team-svg-wrapper {
   gap: 24px;
   width: 40px;
@@ -382,6 +401,10 @@ img {
   border-radius: 50%;
   fill: var(--light);
   cursor: pointer;
+}
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: var(--pressed-state);
 }
 
 /* Customers */
@@ -410,8 +433,9 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 4px;
+  color: var(--sab-text);
   border: 1px solid var(--sab-text);
-  transition: color var(--tran-fast), border var(--tran-fast);
+  transition: border-color var(--tran-fast), color var(--tran-fast);
 }
 .customers-a:hover,
 .customers-a:focus {
@@ -450,25 +474,30 @@ img {
   border: 1px solid var(--accent);
   background-color: var(--light);
   font-family: var(--primary-font);
-  transition: color var(--tran-fast), background-color var(--tran-fast);
+  transition: color var(--tran-fast), background-color var(--tran-fast),
+    border-color var(--tran-fast), box-shadow var(--tran-fast);
 }
 .nav-btn:hover,
 .nav-btn:focus {
   color: var(--white-background);
   background-color: var(--pressed-state);
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
-.active-btn {
+/* .active-btn {
   color: var(--light);
   background-color: var(--pressed-state);
-}
-.active-btn:hover,
+} */
+/* .active-btn:hover,
 .active-btn:focus {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-}
+} */
 /* Cards */
 .portfolio-cards-ul {
   display: flex;
@@ -481,6 +510,7 @@ img {
 }
 .card-a {
   display: block;
+  transition: box-shadow 250ms var(--tran-fast);
 }
 .card-a:hover,
 .card-a:focus {
@@ -516,7 +546,7 @@ img {
   top: 0px;
   opacity: 1;
   visibility: 1;
-  transform: translateY(0);
+  transform: translateY(0%);
 }
 .card-thumb:hover,
 .card-thumb:focus {
@@ -545,9 +575,11 @@ img {
 
 /* Footer */
 .footer {
-  align-items: baseline;
   padding: 100px 0;
   background-color: var(--dark);
+}
+.footer > div {
+  align-items: baseline;
 }
 .footer-logo-block {
   margin-right: 120px;
@@ -562,6 +594,7 @@ img {
   font-family: var(--primary-font);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  color: var(--white-background);
 }
 .footer-media-header {
   margin-bottom: 16px;
@@ -575,4 +608,12 @@ img {
 .footer-media-icons {
   width: 224px;
   gap: 16px;
+}
+.footer-link {
+  background-color: var(--primary-brand);
+  transition: background-color var(--tran-fast);
+}
+.footer-link:hover,
+.footer-link:focus {
+  background-color: var(--success);
 }
