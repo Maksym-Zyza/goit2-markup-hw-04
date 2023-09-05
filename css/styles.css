@@ -524,16 +524,11 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
 
-  opacity: 0;
-  visibility: 0;
   transform: translateY(100%);
-  transition: transform var(--tran-fast), opacity var(--tran-fast),
-    visibility var(--tran-fast);
+  transition: transform var(--tran-fast);
 }
-.card-thumb:hover .card-overlay,
-.card-thumb:focus .card-overlay {
-  opacity: 1;
-  visibility: 1;
+.card-a:hover .card-overlay,
+.card-a:focus .card-overlay {
   transform: translateY(0%);
 }
 .card-thumb:hover,
